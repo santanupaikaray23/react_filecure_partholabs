@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { withRouter } from 'react-router-dom';
 import './Search.css';
 
 
@@ -6,8 +7,8 @@ const serviceUrl = "http://localhost:9700/Service";
 const servicetypeUrl = "http://localhost:9700/types?service=";
 
 class Search extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 console.log(">>>>in constructor")
         this.state={
            Service:'',
@@ -52,8 +53,13 @@ console.log(">>>>in constructor")
             this.setState({servicetypes:data})
         })
     }
+    handleServicetype = (event) => {
+        this.props.history.push(`details/${event.target.value}`)
+    }
+    
     render(){
-        console.log(">>>>in render", this.state.Service)
+        console.log(">>>in search",this.props)
+        // console.log(">>>>in render", this.state.Service)
         return(
             <div className="imageContainer">
                 <div id="logo">
@@ -67,7 +73,7 @@ console.log(">>>>in constructor")
                         <option>----SELECT SERVICE----</option>
                         {this.renderServicetype(this.state.Service)}
                     </select>
-                    <select className="serviceDropDown">
+                    <select className="serviceDropDown" onChange={this.handleServicetype}>
                         <option>----SELECT SERVICE TYPE----</option>
                         {this.renderService(this.state.servicetypes)}
                     </select>
@@ -95,4 +101,4 @@ console.log(">>>>in constructor")
 
     }
 }
-export default Search;
+export default withRouter(Search);

@@ -13,7 +13,7 @@ class Listing extends Component{
         }
     }
     render(){
-      
+        console.log(">>>in listing",this.props)
         return(
             <div className="row">
                   <div className="col-md-10">

@@ -49,7 +49,7 @@ import 'react-tabs/style/react-tabs.css';
           Bhubaneswar-751006,Phone no.9937114544</h2>
     </TabPanel>
   </Tabs>
-  <Link to="/" className="btn btn-danger">Back</Link> &nbsp;
+  <Link to="/home" className="btn btn-danger">Back</Link> &nbsp;
   <Link to={`/booking/${Details.name}`} className="btn btn-success">
       Proceed
   </Link>

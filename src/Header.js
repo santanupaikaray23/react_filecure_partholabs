@@ -19,14 +19,15 @@ class Header extends Component {
                         </div>
                         <div className="collapse navbar-collapse" id="myNavbar">
                         <ul className="nav navbar-nav">
-                            <li><Link to="/">Home</Link></li>
-                            <li><Link to="/viewBooking">Booking</Link></li>
+                            <li><Link to="/home">Home</Link></li>
+                            {/* <li><Link to="/viewBooking">Booking</Link></li> */}
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                        <li><Link href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</Link></li>
-                        <li><Link href="#"><span class="glyphicon glyphicon-log-in"></span> Login</Link></li>
+                        <li><Link href="#"><span class="glyphicon glyphicon-user"></span> Login</Link></li>
+                        <li><Link href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</Link></li>
                         </ul>
                         </div>
+                      
                     </div>
                 </nav>
             </div>
