@@ -13,6 +13,12 @@ import DetailComponent from './Component/details/details';
  import RegisterComponent from './Component/Register';
  import UserComponent from './Component/UserApi';
  import Logout2Component from './Component/Home/Logout2';
+ import LogoutComponent from './Component/Logout';
+//  import CheckoutComponent from './Component/Checkout';
+
+// import Checkout from './Component/Checkout';
+
+
  
  
 
@@ -25,16 +31,24 @@ import DetailComponent from './Component/details/details';
     
   
     return(
-        <BrowserRouter>
+        <BrowserRouter forceRefresh={true}>
   
         <Header/>
-   
+        {/* <PayPalScriptProvider options={{"client-id":process.env.REACT_APP_PAYPAL_CLIENT_ID}}>
+                
+                      
+                <Route path="/checkout" element={<><Checkout/></>}/>
+         
+ 
+        </PayPalScriptProvider> */}
        
        <Route path="/logout2" component={Logout2Component}/>  
        <Route exact path="/" component={LoginComponent}/>
        <Route path="/register" component={RegisterComponent}/>
        <Route path="/show" component={UserComponent}/>
        <Route exact path="/home" component={Home}/>
+       {/* <Route path="/checkout" component={CheckoutComponent}/> */}
+
       
        {/* <Route exact path="/profile" component={Profile}/> */}
        {/* <Route exact path="/Post" component={Post}/> */}
@@ -43,7 +57,10 @@ import DetailComponent from './Component/details/details';
        <Route path="/list/:id" component={ListingApi}/>
        <Route path="/details/:id" component={DetailComponent}/>
        <Route path="/booking/:service_name" component={PlaceBooking}/>
+       
        <Route path="/viewBooking" component={BookingComponent}/>
+    
+       <Route path="/logout" component={LogoutComponent}/>
        
      
   

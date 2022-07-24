@@ -75,7 +75,7 @@ class Login extends Component{
                    
                  
                     <button className="btn btn-success" onClick={this.handleSubmit}>
-                        Login
+                        Submit
                     </button>
 
                 </div>

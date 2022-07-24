@@ -33,7 +33,7 @@ class Register extends Component{
             body:JSON.stringify(this.state)
 
         })
-        .then( this.props.history.push('/'))
+        .then( this.props.history.push('/home'))
 
         alert("Registered Successfull")
         
@@ -81,7 +81,7 @@ class Register extends Component{
                         className="form-control" onChange={this.handleChange}/>
                     </div> */}
                     <div className="form-group">
-                        <label>Password</label>
+                        <label>Set Password</label>
                         <input name="password" value={this.state.password}
                         className="form-control" onChange={this.handleChange}/>
 
